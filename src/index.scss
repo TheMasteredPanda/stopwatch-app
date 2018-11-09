@@ -1,0 +1,156 @@
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+#root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.uiElement {
+    display: inline-block;
+    background-color: #3500D3;
+    color: white;
+    margin: 5px auto;
+    margin-top: 50px;
+    margin-left: 5px;
+    padding: 5px;
+    @include border-radius(5px);
+}
+
+#app {
+    background-color: #282828;
+    width: 600px;
+    height: 200px;
+    position: relative;
+
+    button {
+        background-color: #3500D3;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        @include border-radius(10px);
+    }
+
+    #lapButton {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 3%;
+        margin-right: 3%;
+    }
+
+    #startButton {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 3%;
+        margin-left: 3%;
+    }
+
+    #stopButton {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 24%;
+        margin-bottom: 3%;
+    }
+
+    #timer {
+        position: absolute;
+        color: white;
+        width: 50%;
+        top: -40px;
+        left: 25%;
+        text-align: center;
+    }
+
+    #slowestLap {
+        position: absolute;
+        margin-left: 0px;
+        left: 3%;
+    }
+
+    #fastestLap {
+        position: absolute;
+        margin-left: 0px;
+        left: 3%;
+        top: 20%;
+    }
+
+    #lapCount {
+        position: absolute;
+        left: 34%;
+        margin-left: 0px;
+    }
+}
+
+#laps {
+    width: 600px;
+    margin-top: 55px;
+    height: auto;
+    position: relative;
+    list-style: none;
+    // background: #282828;
+
+    h2 {
+        color: white;
+        
+    }
+
+    .lap {
+        // margin-top: 20px;
+        background: #282828;
+        height: 60px;
+        font-size: 25px;
+        position: relative;
+
+        #lapTime {
+            position: relative;
+            right: -49%;
+            top: -67%;
+        }
+
+        #lapNo {
+            position: relative;
+            margin-left: 12%;
+            top: -67%;
+            left: 10%;
+        }
+    }
+}
+
+#lapNoTitle {
+    position: absolute;
+    text-transform: uppercase;
+    height: 50px;
+    left: 8px;
+    margin-top: 0px;
+    background: #282828;
+    width: 300px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    // left: 3%;
+    // top: 0;
+}
+
+#lapTimeTitle {
+    position: absolute;
+    text-transform: uppercase;
+    background: #282828;
+    height: 50px;
+    width: 300px;
+    margin-top: 0px;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+    left: 308px;
+}
